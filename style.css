@@ -1,52 +1,277 @@
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 12px;
-    max-width: 960px;
-    margin: auto;
+:root {
+    --paper: #F3F5F6;
+    --ink: #16242C;
+    --slate: #5C6B74;
+    --rule: #CDD5DA;
+    --cobalt: #2354C7;
+    --display: 'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif;
+    --text: 'Source Serif 4', Georgia, serif;
+    --track: 10rem;
 }
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font: 1.0625rem/1.6 var(--text);
+}
+
+.page {
+    max-width: 62rem;
+    margin: 0 auto;
+    padding: clamp(2.5rem, 7vw, 5rem) clamp(1rem, 4vw, 2rem) 5rem;
+}
+
+p,
+ul {
+    margin: 0;
+}
+
+a {
+    color: var(--cobalt);
+    text-decoration-thickness: 1px;
+    text-underline-offset: .2em;
+}
+
+a:focus-visible {
+    outline: 2px solid var(--cobalt);
+    outline-offset: 3px;
+}
+
+/* Masthead */
+.masthead {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: end;
+    gap: 2rem;
+    margin-bottom: 3.5rem;
+}
+
 h1 {
-    font-size: 3em;
-    letter-spacing: .6em;
-    padding-top: 1em;
-    padding-bottom: 1em;
+    margin: 0 0 1.25rem;
+    font: 800 clamp(3.75rem, 12vw, 7.5rem)/.86 var(--display);
+    font-stretch: 75%;
+    letter-spacing: -.02em;
+}
+
+.title {
+    font: 600 1.5rem/1.2 var(--display);
+}
+
+.focus {
+    color: var(--slate);
+}
+
+.contact {
+    display: grid;
+    gap: .15rem 1.25rem;
+    margin: 0;
+}
+
+.contact div {
+    display: grid;
+    grid-template-columns: 5rem auto;
+    gap: 1rem;
+}
+
+.contact dt {
+    font: 500 .9rem var(--display);
+    color: var(--slate);
+}
+
+.contact dd {
+    margin: 0;
+}
+
+/* Sections: title in the gutter, content beside it */
+.sec {
+    display: grid;
+    grid-template-columns: 10rem minmax(0, 1fr);
+    gap: 0 2rem;
+    padding: 2rem 0 2.5rem;
+    border-top: 1px solid var(--rule);
 }
 
 h2 {
-    font-size: 1.5em;
-    padding-bottom: 1em;
-}
-main { 
-    display: grid;
-    grid-template-columns: 40% 60%;
-    margin-top: 3em;
-}
-header {
-    text-align: center;
-    margin: auto 2em;
+    margin: 0;
+    font: 700 1.1rem/1.4 var(--display);
 }
 
-section {
-    margin: auto 1em 4em 2em;
+.lead {
+    max-width: 38em;
+    font-size: 1.25rem;
+    line-height: 1.5;
 }
 
-i {
-    margin-right: .5em;
+/* Jobs */
+.job + .job {
+    margin-top: 2.75rem;
 }
 
-p {
-    margin: .2em auto
+.job > header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem 1.5rem;
+    margin-bottom: .5rem;
 }
 
-hr {
-    border: none;
-    background-color: lightgray;
-    height: 1px;
+h3 {
+    margin: 0;
+    font: 700 1.4rem/1.2 var(--display);
 }
 
-h1, h2 {
-    font-weight: 100;
-    margin-bottom: 0;
+h3 a {
+    color: inherit;
 }
-#mainLeft {
-    border-right: 1px solid lightgray;
+
+.post {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0 1.5rem;
+}
+
+.post span,
+.detail {
+    color: var(--slate);
+}
+
+.label {
+    margin-top: .75rem;
+    color: var(--slate);
+}
+
+.job ul {
+    padding-left: 1.15rem;
+}
+
+.job ul ul {
+    color: var(--slate);
+    font-size: .95em;
+}
+
+.job li ul {
+    margin-bottom: .25rem;
+}
+
+/* Tenure strips: one shared 2014-2027 axis across every employer */
+.axis {
+    position: relative;
+    width: var(--track);
+    height: 1.25rem;
+    margin: 0 0 .25rem auto;
+    font: 500 .8rem/1 var(--display);
+    color: var(--slate);
+}
+
+.axis span {
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+}
+
+.axis span:first-child {
+    transform: none;
+}
+
+.tenure {
+    position: relative;
+    flex: none;
+    width: var(--track);
+    height: .5rem;
+    overflow: hidden;
+    border-radius: 2px;
+    background: var(--rule);
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+}
+
+.tenure span {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: calc(var(--s) * 1%);
+    width: calc(var(--l) * 1%);
+    background: var(--slate);
+    transform-origin: left;
+    animation: grow .8s cubic-bezier(.2, .7, .2, 1) both;
+    animation-delay: calc(var(--i, 0) * 120ms);
+}
+
+.tenure .now {
+    background: var(--cobalt);
+}
+
+.tenure .up {
+    background: var(--ink);
+}
+
+@keyframes grow {
+    from {
+        transform: scaleX(0);
+    }
+}
+
+/* Education and projects */
+.projects {
+    list-style: none;
+    padding: 0;
+}
+
+.projects li {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0 1.5rem;
+}
+
+.projects span {
+    color: var(--slate);
+}
+
+@media (max-width: 40rem) {
+    :root {
+        --track: 100%;
+    }
+
+    .masthead {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .sec {
+        grid-template-columns: 1fr;
+        gap: .75rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tenure span {
+        animation: none;
+    }
+}
+
+@media print {
+    body {
+        background: #fff;
+        font-size: 10pt;
+    }
+
+    .page {
+        padding: 0;
+    }
+
+    .job {
+        break-inside: avoid;
+    }
+
+    .tenure span {
+        animation: none;
+    }
 }

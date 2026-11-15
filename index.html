@@ -1,192 +1,213 @@
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
-    <link href="style.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Resume - Nor Arriesgado</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Source+Serif+4:opsz,wght@8..60,400..700&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
-    <header id="header">
-        <!-- resume header with your name and title -->
-        <h1><b>NOR</b> ARRIESGADO</h1>
-        <hr>
-        Senior .NET / AI Engineer | Cloud - Azure | .NET | AI | Architecture
-        <hr>
-    </header>
-    <main>
-        <article id="mainLeft">
-            <section>
-                <h2>CONTACT</h2>
-                <!-- contact info including social media -->
-                <p>
-                    <i class="fa fa-envelope" aria-hidden="true"></i>
-                    <a href="mailto:norarrsgd@pm.me">norarrsgd@pm.me</a>
-                </p>
-                <p>
-                    <i class="fab fa-github" aria-hidden="true"></i>
-                    <a href="https://github.com/norarrsgd">norarrsgd</a>
-                </p>
-                <p>
-                    <i class="fab fa-linkedin" aria-hidden="true"></i>
-                    <a href="https://linkedin.com/in/norarrsgd">norarrsgd</a>
-                </p>
-                <p>
-                    <i class="fab fa-microsoft" aria-hidden="true"></i>
-                    <a href="https://www.nuget.org/profiles/kuromukira">NuGet Profile</a>
-                </p>
+    <div class="page">
+        <header class="masthead">
+            <div>
+                <h1>Nor<br>Arriesgado</h1>
+                <p class="title">Senior .NET / AI Engineer</p>
+                <p class="focus">Cloud (Azure), .NET, AI, Architecture</p>
+            </div>
+            <dl class="contact">
+                <div>
+                    <dt>Email</dt>
+                    <dd><a href="mailto:norarrsgd@pm.me">norarrsgd@pm.me</a></dd>
+                </div>
+                <div>
+                    <dt>GitHub</dt>
+                    <dd><a href="https://github.com/norarrsgd">norarrsgd</a></dd>
+                </div>
+                <div>
+                    <dt>LinkedIn</dt>
+                    <dd><a href="https://linkedin.com/in/norarrsgd">norarrsgd</a></dd>
+                </div>
+                <div>
+                    <dt>NuGet</dt>
+                    <dd><a href="https://www.nuget.org/profiles/kuromukira">NuGet profile</a></dd>
+                </div>
+            </dl>
+        </header>
+
+        <main>
+            <section class="sec">
+                <h2>About</h2>
+                <p class="lead">Experienced Software Engineer with a demonstrated history in software engineering.
+                    Skilled in C#, SQL, Angular and Dart-Flutter. Deeply interested in Software Architecture, Clean
+                    Code, DevOps and digital transformation of the society.</p>
             </section>
-            <section>
-                <h2>SKILLS</h2>
-                <!-- your skills AKA "buzzwords" -->
-                <p>AI, C#, .NET, SQL, Azure Functions, Distributed Systems, Dart/Flutter, Learning GO</p>
-            </section>
-            <section>
-                <h2>EDUCATION</h2>
-                <!-- your education -->
-                <b>Bachelor of Science in Computer Science</b>
-                <p>
-                    Cum Laude
-                </p>
-                <p>
-                    Northwest Samar State University
-                </p>
-                <p>
-                    Calbayog City, Samar, Philippines
-                </p>
-                <p>
-                    2010 - 2014
-                </p>
-            </section>
-            <section>
-                <h2>Other Projects</h2>
-                <p>
-                    <a href="https://github.com/norarrsgd/universe"><b>Universe</b></a>
-                </p>
-                <p>
-                    July 2022
-                </p><br>
-                <p>
-                    <a href="https://www.facebook.com/nomnomfooddeliveryapp"><b>Nom Nom - Food Delivery App</b></a>
-                </p>
-                <p>
-                    June 2020 - 2022
-                </p><br>
-                <p>
-                    <a href="https://github.com/norarrsgd/poco.mapper"><b>POCO.Mapper</b></a>
-                </p>
-                <p>
-                    Jan 2019
-                </p><br>
-                <p>
-                    <a href="https://github.com/norarrsgd/azure-functions-jwt-validation-extension"><b>Azure Functions Extension for JWT Validation</b></a>
-                </p>
-                <p>
-                    Feb 2020
-                </p>
-            </section>
-        </article>
-        <article id="mainRight">
-            <section>
-                <h2>ABOUT</h2>
-                <!-- about you -->
-                <p>Experienced Software Engineer with a demonstrated history in software engineering. Skilled in C#,
-                    SQL, Angular and Dart-Flutter. Deeply interested in Software Architecture, Clean Code, DevOps and
-                    digital transformation of the society.</p>
-            </section>
-            <section>
-                <h2>WORK EXPERIENCE</h2>
-                <!-- your work experience -->
-                <h3><b><a href="https://bermwood.com/">Bermwood Consulting, LLC</a></b></h3>
-                <p>
-                    <b>Director of Architecture and Information Security</b> | July 2026 - Present
-                </p>
-                <p>
-                    <b>Senior Software Engineer</b> | April 2024 - Present
-                </p>
-                <p>Responsibilities:</p>
-                <ul>
-                    <li>Improve and maintain the flagship PropTech software (<a href="https://about.velocity.properties/">see here</a>)</li>
-                    <ul>
-                        <li>API development</li>
-                        <li>Azure DevOps</li>
-                        <li>Azure</li>
-                    </ul>
-                    <li>Create and maintain Agentic RAG systems for PropTech</li>
-                    <ul>
-                        <li>Agent RAG</li>
-                        <li>MCP</li>
-                        <li>AI Lease Abstractions</li>
-                    </ul>
-                    <li>Manage and lead the <u>Infra and InfoSec</u> team</li>
-                    <li>Manage Organization Compliance</li>
-                    <li>Manage Organization Security</li>
-                </ul>
-                <h3><b>MediMarketing Inc. (MIMS Philippines)</b></h3>
-                <p>
-                    <b>Senior Software Engineer</b> | July 2022 - March 2024<br/>
-                    <span>Product Development, Regional Product Build, Ops & Delivery, CDS Regional</span>
-                </p>
-                <p>Responsibilities:</p>
-                <ul>
-                    <li>Improve and maintain the various product builds for the Clincal Decision Support systems</li>
-                    <ul>
-                        <li>Web Services AU</li>
-                        <li>Azure DevOps</li>
-                    </ul>
-                </ul>
-                <h3><b>Arcanys</b></h3>
-                <p>
-                    <b>.NET Developer</b> | Feb 2019 - July 2022
-                </p>
-                <p>Project Handled:</p>
-                <ul>
-                    <li>
-                        <b>Payment Logic (<a href="https://paymentlogic.com.au">see here</a>)</b>
-                        <p>Responsibilities:</p>
+
+            <!-- shortcut: tenure strips are hard-coded percentages of a 2014-2027 axis (--s start, --l length), recompute when a role changes -->
+            <section class="sec">
+                <h2>Work experience</h2>
+                <div>
+                    <div class="axis" aria-hidden="true">
+                        <span style="left:0">2014</span>
+                        <span style="left:92.3%">2026</span>
+                    </div>
+
+                    <article class="job">
+                        <header>
+                            <h3><a href="https://bermwood.com/">Bermwood Consulting, LLC</a></h3>
+                            <div class="tenure" style="--i:0" aria-hidden="true">
+                                <span class="now" style="--s:78.8;--l:20.2"></span>
+                                <span class="up" style="--s:96.2;--l:2.9"></span>
+                            </div>
+                        </header>
+                        <p class="post"><b>Director of Architecture and Information Security</b><span>July 2026 - Present</span></p>
+                        <p class="post"><b>Senior Software Engineer</b><span>April 2024 - Present</span></p>
+                        <p class="label">Responsibilities:</p>
                         <ul>
-                            <li>Build and maintain an ASP.Net & Angular project</li>
-                            <li>Lead one of the 4 SCRUM teams that is part of the project</li>
-                            <li>
-                                Help develop and maintain the Microservices Architecture and Mobile Application built
-                                with Flutter
+                            <li>Improve and maintain the flagship PropTech software (<a href="https://about.velocity.properties/">see here</a>)
+                                <ul>
+                                    <li>API development</li>
+                                    <li>Azure DevOps</li>
+                                    <li>Azure</li>
+                                </ul>
+                            </li>
+                            <li>Create and maintain Agentic RAG systems for PropTech
+                                <ul>
+                                    <li>Agent RAG</li>
+                                    <li>MCP</li>
+                                    <li>AI Lease Abstractions</li>
+                                </ul>
+                            </li>
+                            <li>Manage and lead the <strong>Infra and InfoSec</strong> team</li>
+                            <li>Manage Organization Compliance</li>
+                            <li>Manage Organization Security</li>
+                        </ul>
+                    </article>
+
+                    <article class="job">
+                        <header>
+                            <h3>MediMarketing Inc. (MIMS Philippines)</h3>
+                            <div class="tenure" style="--i:1" aria-hidden="true">
+                                <span style="--s:65.4;--l:13.5"></span>
+                            </div>
+                        </header>
+                        <p class="post"><b>Senior Software Engineer</b><span>July 2022 - March 2024</span></p>
+                        <p class="detail">Product Development, Regional Product Build, Ops &amp; Delivery, CDS Regional</p>
+                        <p class="label">Responsibilities:</p>
+                        <ul>
+                            <li>Improve and maintain the various product builds for the Clinical Decision Support systems
+                                <ul>
+                                    <li>Web Services AU</li>
+                                    <li>Azure DevOps</li>
+                                </ul>
                             </li>
                         </ul>
-                    </li>
-                </ul>
-                <h3><b>Jinisys Software Inc.</b></h3>
-                <p>
-                    <b>Development and Production Manager</b> | Sept 2018 - Feb 2019
-                </p>
-                <p>
-                    <b>Software Development Team Lead</b> | June 2016 - Sept 2018
-                </p>
-                <p>
-                    <b>Software Engineer</b> | Feb 2015 - June 2016
-                </p>
-                <p>Responsibilities:</p>
-                <ul>
-                    <li>Maintain and enhance existing enterprise software catered to fit the client's needs</li>
-                    <li>Research and develop new software to fit the market's demand</li>
-                    <li>Projects handled:
+                    </article>
+
+                    <article class="job">
+                        <header>
+                            <h3>Arcanys</h3>
+                            <div class="tenure" style="--i:2" aria-hidden="true">
+                                <span style="--s:39.1;--l:26.3"></span>
+                            </div>
+                        </header>
+                        <p class="post"><b>.NET Developer</b><span>Feb 2019 - July 2022</span></p>
+                        <p class="label">Project Handled:</p>
                         <ul>
-                            <li>Kloud Hotels (Web and API) (Team Lead and Architect)</li>
-                            <li>Folio Plus v4 (Support and Maintenance)</li>
-                            <li>Resto Plus v5 (Support and Maintenance)</li>
+                            <li>
+                                <strong>Payment Logic (<a href="https://paymentlogic.com.au">see here</a>)</strong>
+                                <p class="label">Responsibilities:</p>
+                                <ul>
+                                    <li>Build and maintain an ASP.Net &amp; Angular project</li>
+                                    <li>Lead one of the 4 SCRUM teams that is part of the project</li>
+                                    <li>Help develop and maintain the Microservices Architecture and Mobile Application
+                                        built with Flutter</li>
+                                </ul>
+                            </li>
                         </ul>
+                    </article>
+
+                    <article class="job">
+                        <header>
+                            <h3>Jinisys Software Inc.</h3>
+                            <div class="tenure" style="--i:3" aria-hidden="true">
+                                <span style="--s:8.3;--l:30.8"></span>
+                            </div>
+                        </header>
+                        <p class="post"><b>Development and Production Manager</b><span>Sept 2018 - Feb 2019</span></p>
+                        <p class="post"><b>Software Development Team Lead</b><span>June 2016 - Sept 2018</span></p>
+                        <p class="post"><b>Software Engineer</b><span>Feb 2015 - June 2016</span></p>
+                        <p class="label">Responsibilities:</p>
+                        <ul>
+                            <li>Maintain and enhance existing enterprise software catered to fit the client's needs</li>
+                            <li>Research and develop new software to fit the market's demand</li>
+                            <li>Projects handled:
+                                <ul>
+                                    <li>Kloud Hotels (Web and API) (Team Lead and Architect)</li>
+                                    <li>Folio Plus v4 (Support and Maintenance)</li>
+                                    <li>Resto Plus v5 (Support and Maintenance)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article class="job">
+                        <header>
+                            <h3>root+ Technology Services</h3>
+                            <div class="tenure" style="--i:4" aria-hidden="true">
+                                <span style="--s:0;--l:7.7"></span>
+                            </div>
+                        </header>
+                        <p class="post"><b>Software Engineer</b><span>Jan 2014 - Jan 2015</span></p>
+                        <p class="label">Responsibilities:</p>
+                        <ul>
+                            <li>Build and maintain desktop applications for various business processes</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <section class="sec">
+                <h2>Skills</h2>
+                <p>AI, C#, .NET, SQL, Azure Functions, Distributed Systems, Dart/Flutter, Learning GO</p>
+            </section>
+
+            <section class="sec">
+                <h2>Education</h2>
+                <div>
+                    <p><b>Bachelor of Science in Computer Science</b>, Cum Laude</p>
+                    <p>Northwest Samar State University, Calbayog City, Samar, Philippines</p>
+                    <p class="detail">2010 - 2014</p>
+                </div>
+            </section>
+
+            <section class="sec">
+                <h2>Other projects</h2>
+                <ul class="projects">
+                    <li>
+                        <a href="https://github.com/norarrsgd/universe"><b>Universe</b></a>
+                        <span>July 2022</span>
                     </li>
-                </ul>
-                <h3><b>root+ Technology Services</b></h3>
-                <p>
-                    <b>Software Engineer</b> | Jan 2014 - Jan 2015
-                </p>
-                <p>Responsibilities:</p>
-                <ul>
-                    <li>Build and maintain desktop applications for various business processes</li>
+                    <li>
+                        <a href="https://www.facebook.com/nomnomfooddeliveryapp"><b>Nom Nom - Food Delivery App</b></a>
+                        <span>June 2020 - 2022</span>
+                    </li>
+                    <li>
+                        <a href="https://github.com/norarrsgd/poco.mapper"><b>POCO.Mapper</b></a>
+                        <span>Jan 2019</span>
+                    </li>
+                    <li>
+                        <a href="https://github.com/norarrsgd/azure-functions-jwt-validation-extension"><b>Azure Functions Extension for JWT Validation</b></a>
+                        <span>Feb 2020</span>
+                    </li>
                 </ul>
             </section>
-        </article>
-    </main>
+        </main>
+    </div>
 </body>
 
 </html>
