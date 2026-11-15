@@ -80,13 +80,15 @@ h1 {
     gap: 1rem;
 }
 
+/* Same fixed line height on both columns, so labels sit level with values even where baseline alignment is ignored */
 .contact dt {
-    font: 500 .9rem var(--display);
+    font: 500 .9rem/1.7rem var(--display);
     color: var(--slate);
 }
 
 .contact dd {
     margin: 0;
+    line-height: 1.7rem;
 }
 
 /* Sections: title in the gutter, content beside it */
